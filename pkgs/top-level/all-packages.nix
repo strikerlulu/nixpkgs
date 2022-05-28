@@ -10846,7 +10846,7 @@ with pkgs;
 
   textadept = callPackage ../applications/editors/textadept/10 { stdenv = gcc10StdenvCompat; };
 
-  textadept11 = callPackage ../applications/editors/textadept/11 { };
+  textadept11 = callPackage ../applications/editors/textadept/11 { stdenv = gcc10StdenvCompat; };
 
   texworks = libsForQt5.callPackage ../applications/editors/texworks { };
 

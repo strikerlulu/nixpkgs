@@ -6866,9 +6866,8 @@ with pkgs;
 
   halibut = callPackage ../tools/typesetting/halibut { };
 
-  halide = callPackage ../development/compilers/halide {
-    llvmPackages = llvmPackages_9;
-  };
+  halide = callPackage ../development/compilers/halide
+    { stdenv = gcc10StdenvCompat; llvmPackages = llvmPackages_9; };
 
   harec = callPackage ../development/compilers/hare/harec.nix { };
   hare = callPackage ../development/compilers/hare/hare.nix { };

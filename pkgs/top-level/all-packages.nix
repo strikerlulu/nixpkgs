@@ -31240,9 +31240,8 @@ with pkgs;
     boost = boost17x;
   };
 
-  oxen = callPackage ../applications/blockchains/oxen {
-    boost = boost17x;
-  };
+  oxen = callPackage ../applications/blockchains/oxen
+    { stdenv = gcc10StdenvCompat; boost = boost17x; };
 
   masari = callPackage ../applications/blockchains/masari { boost = boost165; };
 

@@ -10844,7 +10844,7 @@ with pkgs;
 
   texstudio = libsForQt5.callPackage ../applications/editors/texstudio { };
 
-  textadept = callPackage ../applications/editors/textadept/10 { };
+  textadept = callPackage ../applications/editors/textadept/10 { stdenv = gcc10StdenvCompat; };
 
   textadept11 = callPackage ../applications/editors/textadept/11 { };
 

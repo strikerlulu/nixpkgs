@@ -28641,7 +28641,7 @@ with pkgs;
 
   mypaint-brushes = callPackage ../development/libraries/mypaint-brushes { };
 
-  mythtv = libsForQt514.callPackage ../applications/video/mythtv { };
+  mythtv = libsForQt514.callPackage ../applications/video/mythtv { stdenv = gcc10StdenvCompat; };
 
   micro = callPackage ../applications/editors/micro { };
 

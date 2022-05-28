@@ -7510,7 +7510,7 @@ with pkgs;
 
   peruse = libsForQt5.callPackage ../tools/misc/peruse { };
 
-  ksmoothdock = libsForQt5.callPackage ../applications/misc/ksmoothdock { };
+  ksmoothdock = libsForQt5.callPackage ../applications/misc/ksmoothdock { stdenv = gcc10StdenvCompat; };
 
   kstars = libsForQt5.callPackage ../applications/science/astronomy/kstars { };
 

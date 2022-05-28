@@ -29693,7 +29693,7 @@ with pkgs;
 
   socialscan = with python3.pkgs; toPythonApplication socialscan;
 
-  sonic-lineup = libsForQt5.callPackage ../applications/audio/sonic-lineup { };
+  sonic-lineup = libsForQt5.callPackage ../applications/audio/sonic-lineup { stdenv = gcc10StdenvCompat; };
 
   sonic-visualiser = libsForQt5.callPackage ../applications/audio/sonic-visualiser { };
 

@@ -13552,10 +13552,12 @@ with pkgs;
 
   mosml = callPackage ../development/compilers/mosml { };
 
-  mozart2 = callPackage ../development/compilers/mozart {
-    emacs = emacs-nox;
-    jre_headless = jre8_headless; # TODO: remove override https://github.com/NixOS/nixpkgs/pull/89731
-  };
+  mozart2 = callPackage ../development/compilers/mozart
+    {
+      stdenv = gcc10StdenvCompat;
+      emacs = emacs-nox;
+      jre_headless = jre8_headless; # TODO: remove override https://github.com/NixOS/nixpkgs/pull/89731   };
+    };
 
   mozart2-binary = callPackage ../development/compilers/mozart/binary.nix { };
 

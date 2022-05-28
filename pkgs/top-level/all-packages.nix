@@ -29370,7 +29370,7 @@ with pkgs;
 
   restique = libsForQt5.callPackage ../applications/backup/restique { };
 
-  retroshare = libsForQt5.callPackage ../applications/networking/p2p/retroshare { };
+  retroshare = libsForQt5.callPackage ../applications/networking/p2p/retroshare { stdenv = gcc10StdenvCompat; };
 
   rgp = libsForQt5.callPackage ../development/tools/rgp { };
 

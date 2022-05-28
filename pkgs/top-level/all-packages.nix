@@ -8934,7 +8934,7 @@ with pkgs;
     inherit (darwin.apple_sdk.frameworks) CoreFoundation Security;
   };
 
-  onioncircuits = callPackage ../tools/security/onioncircuits { };
+  onioncircuits = callPackage ../tools/security/onioncircuits { stdenv = gcc10StdenvCompat; };
 
   onlykey-agent = callPackage ../tools/security/onlykey-agent { };
 

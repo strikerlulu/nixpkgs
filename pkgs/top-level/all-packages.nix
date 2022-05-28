@@ -27576,7 +27576,7 @@ with pkgs;
 
   klayout = libsForQt5.callPackage ../applications/misc/klayout { };
 
-  klee = callPackage ../applications/science/logic/klee { };
+  klee = callPackage ../applications/science/logic/klee { stdenv = gcc10StdenvCompat; };
 
   kmetronome = libsForQt5.callPackage ../applications/audio/kmetronome { };
 

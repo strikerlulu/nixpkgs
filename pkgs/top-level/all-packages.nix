@@ -31813,7 +31813,7 @@ with pkgs;
 
   gogui = callPackage ../games/gogui { };
 
-  gscrabble = python3Packages.callPackage ../games/gscrabble { };
+  gscrabble = python3Packages.callPackage ../games/gscrabble { stdenv = gcc10StdenvCompat; };
 
   gshogi = python3Packages.callPackage ../games/gshogi { };
 
